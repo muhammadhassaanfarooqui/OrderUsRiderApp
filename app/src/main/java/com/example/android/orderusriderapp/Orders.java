@@ -8,12 +8,13 @@ import java.util.ArrayList;
 
 public class Orders {
     ArrayList<Order> orders;
-    private class Order {
+    public class Order {
         String store;
         String payment;
         String time;
     }
     Orders() {
+        orders = new ArrayList<Order>();
         Order order1 = new Order();
         order1.store = "Gourmet Bakers and Sweets";
         order1.payment = "Cash on delivery";
