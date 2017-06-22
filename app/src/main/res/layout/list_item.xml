@@ -1,94 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <FrameLayout
-            android:id="@+id/frame"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:id="@+id/time_container_image_view"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:contentDescription="@string/app_name"
-                android:paddingTop="8dp"
-                android:src="@drawable/time_container" />
-
-            <TextView
-                android:id="@+id/order_arrival_time_text_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@id/time_container_image_view"
-                android:layout_alignTop="@id/time_container_image_view"
-                android:layout_gravity="center"
-                android:paddingTop="8dp"
-                android:textColor="#FFFFFF"
-                android:textSize="18dp"
-                tools:text="11:45PM" />
-
-        </FrameLayout>
-
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/order_status_container_image_view"
+            android:id="@+id/time_container_image_view"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
             android:adjustViewBounds="true"
             android:contentDescription="@string/app_name"
             android:paddingTop="8dp"
-            android:src="@drawable/accept" />
+            android:src="@drawable/time_container" />
 
         <TextView
-            android:id="@+id/store"
+            android:id="@+id/order_arrival_time_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/frame"
-            android:paddingBottom="8dp"
-            android:paddingLeft="16dp"
+            android:layout_alignBottom="@id/time_container_image_view"
+            android:layout_alignTop="@id/time_container_image_view"
+            android:layout_gravity="center"
             android:paddingTop="8dp"
-            android:textStyle="bold"
-            tools:text="Store: " />
+            android:textColor="#FFFFFF"
+            android:textSize="18dp"
+            tools:text="11:45PM" />
 
-        <TextView
-            android:id="@+id/payment"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/store"
-            android:paddingBottom="8dp"
-            android:paddingLeft="16dp"
-            android:textStyle="bold"
-            tools:text="Payment: " />
+    </FrameLayout>
 
-        <TextView
-            android:id="@+id/store_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/frame"
-            android:layout_toRightOf="@id/store"
-            android:paddingLeft="8dp"
-            android:paddingTop="8dp"
-            tools:text="Store Name Here" />
 
-        <TextView
-            android:id="@+id/payment_method"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/store"
-            android:layout_toRightOf="@id/payment"
-            android:paddingLeft="8dp"
-            tools:text="Payment Method Here" />
+    <ImageView
+        android:id="@+id/order_status_container_image_view"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/app_name"
+        android:paddingTop="8dp"
+        android:src="@drawable/accept" />
 
-    </RelativeLayout>
-</ScrollView>
+    <TextView
+        tools:text="Store: "
+        android:id="@+id/store"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/frame"
+        android:textStyle="bold"
+        android:paddingTop="8dp"
+        android:paddingLeft="16dp"
+        android:paddingBottom="8dp"/>
 
+    <TextView
+        android:id="@+id/payment"
+        tools:text="Payment: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/store"
+        android:textStyle="bold"
+        android:paddingLeft="16dp"
+        android:paddingBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/store_name"
+        tools:text="Store Name Here"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/store"
+        android:layout_below="@id/frame"
+        android:paddingLeft="8dp"
+        android:paddingTop="8dp"/>
+
+    <TextView
+        android:id="@+id/payment_method"
+        tools:text="Payment Method Here"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/payment"
+        android:layout_below="@id/store"
+        android:paddingLeft="8dp"/>
+
+</RelativeLayout>
